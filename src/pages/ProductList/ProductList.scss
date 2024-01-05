@@ -1,0 +1,15 @@
+#main_product{
+    .page_header{
+        margin: 1.2rem;
+        border-radius: .4rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(231, 89, 7);
+        text-shadow: #FC0 1px 0 10px;
+    }
+    .card_list{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
