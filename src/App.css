@@ -6,12 +6,10 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background: linear-gradient(
     to top left,
-    rgb(187, 153, 255) 50%,
-    rgb(117, 117, 163) 50%
+    rgb(10, 1, 29) 50%,
+    rgb(224, 191, 243) 50%
   );
 }
 .glass_background {

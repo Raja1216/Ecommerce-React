@@ -4,11 +4,16 @@ import Card from "../../components/Card/Card";
 
 const ProductList = () => {
   return (
-    <div id="main_product">
+    <div className="container" id="main_product">
       <header className="page_header glass_background">
         <span>Product List</span>
       </header>
-      <div className="card_list">
+      <div className="row">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
         <Card />
         <Card />

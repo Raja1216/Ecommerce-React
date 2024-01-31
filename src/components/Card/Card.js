@@ -1,37 +1,57 @@
-import React from "react";
-import "./Card.scss"
+import React, { useState } from "react";
+import "./Card.scss";
 
 const Card = () => {
-  return <div class="main_card">
-        <div class="card">
-            <div class="imgBx">
-                <img src="http://pngimg.com/uploads/running_shoes/running_shoes_PNG5782.png" alt="nike-air-shoe" />
-            </div>
+  const [isEditing, setIsEditing] = useState(false);
 
-            <div class="contentBx">
+  const handleEditClick = () => {
+    setIsEditing(!isEditing);
+    console.log("HERE");
+  };
 
-                <h2>Nike Shoes</h2>
+  const handleSaveClick = () => {
+    setIsEditing(false);
+  };
+  return (
+    <div className="col-md-3">
+      <div className={`card ${isEditing ? "card-rotet" : ""}`}>
+        <div
+          className="cover"
+          style={{
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80")',
+          }}
+        >
+          <h1>
+            Tropical
+            <br />
+            Leaf
+          </h1>
+          <span className="price">₨ 35</span>
+          <span
+            className="edit-btn"
+            onClick={handleEditClick}
+            title="Edit Product"
+          >
+            🖌
+          </span>
+          <span className="add-to-cart-btn">Add to cart</span>
+          <div className="card-back">
+            <input
+              className="card-back-input"
+              placeholder="product name"
+            ></input>
+            <input className="card-back-input"></input>
+            <input className="card-back-input"></input>
+            <input className="card-back-input"></input>
 
-                <div class="size">
-                    <h3>Size :</h3>
-                    <span>7</span>
-                    <span>8</span>
-                    <span>9</span>
-                    <span>10</span>
-                </div>
-
-                <div class="color">
-
-                    <h3>Color :</h3>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <a href="#">Buy Now</a>
-            </div>
-
+            <span className="card-back-btnc">Cancel</span>
+            <span className="card-back-btns">Save</span>
+          </div>
         </div>
+      </div>
     </div>
+  );
 };
 
 export default Card;
