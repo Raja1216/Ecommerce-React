@@ -88,7 +88,7 @@ $transition-time: 2s;
       font-size: 1.4em;
       transform: translateZ(0px);
     }
-    .edit-btn{
+    .edit-btn {
       font-weight: 600;
       position: absolute;
       top: 55px;
@@ -100,6 +100,18 @@ $transition-time: 2s;
       font-size: 1.4em;
       transform: translateZ(0px);
       cursor: pointer;
+    }
+    .ratings-container{
+      position: absolute;
+      bottom: 2rem;
+      left: 8rem;
+      color: white;
+      transform-style: preserve-3d;
+      transition: ease all $transition-time;
+      font-size: 1em;
+      z-index: 3;
+      transform: translateZ(0px);
+      background: transparent;
     }
     .add-to-cart-btn {
       font-weight: 200;
@@ -136,7 +148,30 @@ $transition-time: 2s;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .card-back-input{
+    .back-btn-container {
+      transform-style: preserve-3d;
+      transition: ease transform $transition-time, ease background 0.5s;
+      transform: translateZ(-1px) rotatey(-180deg);
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      .card-back-btn {
+        background: transparent;
+        border: 1px solid white;
+        font-weight: 200;
+        font-size: 1.3em;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        outline: none;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+          background-color: white;
+          color: #0b0f08;
+        }
+      }
+    }
+    .card-back-input {
       transform-style: preserve-3d;
       transition: ease transform $transition-time, ease background 0.5s;
       transform: translateZ(-1px) rotatey(-180deg);
@@ -150,40 +185,5 @@ $transition-time: 2s;
       outline: none;
       text-decoration: none;
     }
-    .card-back-btnc{
-      transform-style: preserve-3d;
-      transition: ease transform $transition-time, ease background 0.5s;
-      transform: translateZ(-1px) rotatey(-180deg);
-      background: transparent;
-      border: 1px solid white;
-      font-weight: 200;
-      font-size: 1.3em;
-      color: white;
-      padding: 14px 32px;
-      outline: none;
-      text-decoration: none;
-      &:hover {
-        background-color: white;
-        color: #0b0f08;
-      }
-    }
-    .card-back-btns{
-      transform-style: preserve-3d;
-      transition: ease transform $transition-time, ease background 0.5s;
-      transform: translateZ(-1px) rotatey(-180deg);
-      background: transparent;
-      border: 1px solid white;
-      font-weight: 200;
-      font-size: 1.3em;
-      color: white;
-      padding: 14px 32px;
-      outline: none;
-      text-decoration: none;
-      &:hover {
-        background-color: white;
-        color: #0b0f08;
-      }
-    }
-
   }
 }

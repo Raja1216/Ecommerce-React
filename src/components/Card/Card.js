@@ -35,18 +35,32 @@ const Card = () => {
           >
             🖌
           </span>
+          <span className="ratings-container">&#9733</span>
           <span className="add-to-cart-btn">Add to cart</span>
           <div className="card-back">
             <input
               className="card-back-input"
-              placeholder="product name"
+              placeholder="Product name"
             ></input>
-            <input className="card-back-input"></input>
-            <input className="card-back-input"></input>
-            <input className="card-back-input"></input>
-
-            <span className="card-back-btnc">Cancel</span>
-            <span className="card-back-btns">Save</span>
+            <input
+              className="card-back-input"
+              placeholder="Product Price"
+            ></input>
+            <input
+              className="card-back-input"
+              placeholder="Product Rating"
+            ></input>
+            <textarea
+              style={{ width: "13.9rem" }}
+              className="card-back-input"
+              placeholder="Product Description"
+            ></textarea>
+            <span className="back-btn-container">
+              <span className="card-back-btn" onClick={handleEditClick}>
+                Cancel
+              </span>
+              <span className="card-back-btn">Save</span>
+            </span>
           </div>
         </div>
       </div>
