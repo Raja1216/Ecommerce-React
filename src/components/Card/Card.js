@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Card.scss";
+import RatingStars from "../Rating/RatingStars";
 
 const Card = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -22,11 +23,6 @@ const Card = () => {
               'url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80")',
           }}
         >
-          <h1>
-            Tropical
-            <br />
-            Leaf
-          </h1>
           <span className="price">₨ 35</span>
           <span
             className="edit-btn"
@@ -35,9 +31,20 @@ const Card = () => {
           >
             🖌
           </span>
-          <span className="ratings-container">&#9733</span>
+          <h1>Tropical Leaf</h1>
+          <span className="card-desc">
+            {" "}
+            Here's a simple implementation of a React component for a star
+            rating system that accepts dynamic data ranging from 1 to 5 with
+            increments of 0.5 and displays half stars for values like 1.5, 2.5,
+            etc.:{" "}
+          </span>
+          <span className="ratings-container">
+            {" "}
+            <RatingStars rating={3.5} />
+          </span>
           <span className="add-to-cart-btn">Add to cart</span>
-          <div className="card-back">
+          <form className="card-back">
             <input
               className="card-back-input"
               placeholder="Product name"
@@ -61,7 +68,7 @@ const Card = () => {
               </span>
               <span className="card-back-btn">Save</span>
             </span>
-          </div>
+          </form>
         </div>
       </div>
     </div>
