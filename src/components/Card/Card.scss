@@ -89,9 +89,11 @@ $transition-time: 2s;
       transform: translateZ(0px);
     }
     .edit-btn {
+      display: flex;
+      gap: 1.1rem;
       font-weight: 600;
       position: absolute;
-      top: 55px;
+      top: 62px;
       right: 50px;
       color: white;
       transform-style: preserve-3d;

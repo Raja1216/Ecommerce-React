@@ -1,8 +1,21 @@
 #main_nav {
   .navbar {
     height: 3.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
     .container {
       display: flex;
+      .nav_left{
+        display: flex;
+        gap: 1.5rem;
+      }
+      .nav_rigth{
+        display: flex;
+        gap: 1.5rem;
+      }
     }
   }
+  
 }

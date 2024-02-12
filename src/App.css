@@ -11,6 +11,7 @@ body {
     rgb(10, 1, 29) 50%,
     rgb(224, 191, 243) 50%
   );
+  background-repeat: no-repeat;
 }
 .glass_background {
   background: rgba(255, 255, 255, 0.25);
@@ -18,4 +19,14 @@ body {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+a{
+  color: rgb(236, 92, 35);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+a:hover{
+  color: rgb(164, 83, 240);
+  text-decoration: underline;
 }

@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import "./Card.scss";
 import RatingStars from "../Rating/RatingStars";
+import { CiEdit } from "react-icons/ci";
+import { MdOutlineDeleteOutline } from "react-icons/md";
+import { useDispatch } from "react-redux";
+import  {addItem}  from "../../redux/slices/cartSlice";
 
 const Card = () => {
   const [isEditing, setIsEditing] = useState(false);
+
+  const dispatch = useDispatch();
 
   const handleEditClick = () => {
     setIsEditing(!isEditing);
@@ -24,26 +30,21 @@ const Card = () => {
           }}
         >
           <span className="price">₨ 35</span>
-          <span
-            className="edit-btn"
-            onClick={handleEditClick}
-            title="Edit Product"
-          >
-            🖌
+          <span className="edit-btn">
+            <MdOutlineDeleteOutline />
+            <CiEdit onClick={handleEditClick} />
           </span>
           <h1>Tropical Leaf</h1>
           <span className="card-desc">
-            {" "}
             Here's a simple implementation of a React component for a star
             rating system that accepts dynamic data ranging from 1 to 5 with
             increments of 0.5 and displays half stars for values like 1.5, 2.5,
-            etc.:{" "}
+            etc.
           </span>
           <span className="ratings-container">
-            {" "}
             <RatingStars rating={3.5} />
           </span>
-          <span className="add-to-cart-btn">Add to cart</span>
+          <span className="add-to-cart-btn" onClick={()=>{dispatch(addItem(1));}}>Add to cart</span>
           <form className="card-back">
             <input
               className="card-back-input"
