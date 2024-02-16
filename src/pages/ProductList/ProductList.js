@@ -16,13 +16,16 @@ const ProductList = () => {
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
-  productList = sortByPrice ? [...productList].sort((a, b) => a.price - b.price) : productList;
-  console.log(productList);
+  productList = sortByPrice
+    ? [...productList].sort((a, b) => a.price - b.price)
+    : productList;
   return (
     <div className="container" id="main_product">
       <header className="page_header glass_background">
         <span>{"Product List"}</span>
-        <span onClick={handleSortByPrice} className="sort_btn">{sortByPrice ? "Clear Filter" : "Sort by Price" }</span>
+        <span onClick={handleSortByPrice} className="sort_btn">
+          {sortByPrice ? "Clear Filter" : "Sort by Price"}
+        </span>
       </header>
       <div className="row">
         {productList?.map((data, i) => (
