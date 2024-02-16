@@ -1,25 +1,39 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Tropical Leaf",
       "price": 100,
       "rating": 4.5,
       "description": "Here's a simple implementation of a React component for a star rating system that accepts dynamic data ranging from 1 to 5 with increments of 0.5 and displays half stars for values like 1.5, 2.5,etc."
     },
     {
-      "id": 5,
-      "name": "dfgdfg",
-      "price": "54",
-      "rating": "4",
-      "description": "fghfgh tryrty rty "
+      "name": "SP1",
+      "price": "321",
+      "rating": "3",
+      "description": "yguyguy jghighhg jhjhgjg gfvgff hgfgg hggfugug fut",
+      "id": "570d"
     },
     {
-      "id": 5,
-      "name": "dfgh",
-      "price": "54",
+      "id": "d181",
+      "name": "reytry",
+      "price": "543",
+      "rating": "5",
+      "description": "fghfgjh fgthftu fttru ftryuyytu"
+    },
+    {
+      "id": "fefe",
+      "name": "sdgfsdgh",
+      "price": "120",
       "rating": "3",
-      "description": "dfgdfh"
+      "description": "tdryetr dtytrhtre tyrtu"
+    },
+    {
+      "id": "6b09",
+      "name": "fgjf",
+      "price": "1",
+      "rating": "4",
+      "description": "fdhdfhdj tytru tfrurtui"
     }
   ]
 }

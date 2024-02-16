@@ -6,15 +6,13 @@ import { addProduct } from "../../redux/slices/productSlice";
 
 const AddProduct = () => {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [rating, setRating] = useState("");
+  const [price, setPrice] = useState();
+  const [rating, setRating] = useState();
   const [desc, setDesc] = useState("");
   const dispatch = useDispatch();
 
   const handelAdd = () => {
-    console.log(name, price, rating, desc);
     const req_data = {
-      id: 5,
       name: name,
       price: price,
       rating: rating,

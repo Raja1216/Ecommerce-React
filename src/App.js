@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Nav/Navbar";
 import ProductList from "./pages/ProductList/ProductList";
 import AddProduct from "./components/AddProduct/AddProduct";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
         {
           path: "add-product",
           element: <AddProduct />,
+        },
+        {
+          path: "product-details/:id",
+          element: <ProductDetails />,
         },
       ],
     },

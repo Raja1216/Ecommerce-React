@@ -1,49 +1,85 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
   productList: [],
+  status: "idle",
+  error: null,
 };
 
 //API Call
-const getProductsApi = async () => {
-    let data = [];
-  axios
-    .get("http://localhost:8000/products")
-    .then((res) => {
-      console.log(res.data);
-      data = res.data;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-    return data;
-};
-const addProductApi = async (data) => {
-  axios
-    .post("http://localhost:8000/products", data)
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+export const fetchProducts = createAsyncThunk(
+  "products/fetchProducts",
+  async () => {
+    const response = await axios.get("http://localhost:8000/products");
+    return response.data;
+  }
+);
+
+export const addProduct = createAsyncThunk(
+  "products/addProduct",
+  async (productData) => {
+    const response = await axios.post(
+      "http://localhost:8000/products",
+      productData
+    );
+    return response.data;
+  }
+);
+
+export const updateProduct = createAsyncThunk(
+  "products/updateProduct",
+  async ({ id, productData }) => {
+    const response = await axios.put(
+      `http://localhost:8000/products/${id}`,
+      productData
+    );
+    return response.data;
+  }
+);
+
+export const deleteProduct = createAsyncThunk(
+  "products/deleteProduct",
+  async (id) => {
+    await axios.delete(`http://localhost:8000/products/${id}`);
+    return id;
+  }
+);
 
 const productSlice = createSlice({
   name: "product",
   initialState,
-  reducers: {
-    getProducts(state) {
-      const resData = getProductsApi();
-      state.productList = resData;
-    },
-    addProduct(state, action) {
-      addProductApi(action.payload);
-    },
-    reset: () => initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchProducts.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(fetchProducts.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.productList = action.payload;
+      })
+      .addCase(fetchProducts.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+      })
+      .addCase(addProduct.fulfilled, (state, action) => {
+        state.productList.push(action.payload);
+      })
+      .addCase(updateProduct.fulfilled, (state, action) => {
+        const index = state.productList.findIndex(
+          (product) => product.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.productList[index] = action.payload;
+        }
+      })
+      .addCase(deleteProduct.fulfilled, (state, action) => {
+        state.productList = state.productList.filter(
+          (product) => product.id !== action.payload
+        );
+      });
   },
 });
 
-export const { addProduct, getProducts } = productSlice.actions;
 export default productSlice.reducer;

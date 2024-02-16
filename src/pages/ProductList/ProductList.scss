@@ -1,15 +1,26 @@
-#main_product{
-        margin-top: 4rem;
-    .page_header{
-        margin: 1.2rem;
-        border-radius: .4rem;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: rgb(2, 0, 14);
-        text-shadow: rgb(0, 255, 0) 1px 0 10px;
+#main_product {
+  margin-top: 4rem;
+  .page_header {
+    margin: 1.2rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(2, 0, 14);
+    text-shadow: rgb(0, 255, 0) 1px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    .sort_btn {
+      font-size: 1rem;
+      font-weight: 600;
+      text-shadow: rgb(139, 235, 14) 1px 0 10px;
+      color: rgb(216, 7, 94);
+      cursor: pointer;
     }
-    .card_list{
-        display: flex;
-    }
+  }
+  .card_list {
+    display: flex;
+  }
 }

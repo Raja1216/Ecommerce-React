@@ -4,6 +4,8 @@ import "./Navbar.scss";
 import { FaUserCircle } from "react-icons/fa";
 import { IoMdCart, IoIosAddCircleOutline } from "react-icons/io";
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -32,6 +34,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      <ToastContainer />
       <Outlet />
     </div>
   );
