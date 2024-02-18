@@ -1,8 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const initialState = {
   productList: [],
+  productDetails:null,
   status: "idle",
   error: null,
 };
@@ -12,6 +14,14 @@ export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
   async () => {
     const response = await axios.get("http://localhost:8000/products");
+    return response.data;
+  }
+);
+
+export const getProductDetails = createAsyncThunk(
+  "products/getProductDetails",
+  async ({ id }) => {
+    const response = await axios.get(`http://localhost:8000/products/${id}`);
     return response.data;
   }
 );
@@ -58,8 +68,22 @@ const productSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.productList = action.payload;
+        toast.success("Product get successfully!", { theme: "dark" });
       })
       .addCase(fetchProducts.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message;
+        toast.error(`Error: ${action.error.message}`, { theme: "dark" });
+      })
+
+      .addCase(getProductDetails.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(getProductDetails.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        state.productDetails = action.payload;
+      })
+      .addCase(getProductDetails.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
       })
