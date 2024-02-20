@@ -25,7 +25,7 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="nav_rigth">
-            <NavLink to="/">
+            <NavLink to="/cart">
               <IoMdCart /> <span className="badge">{cartQuantity}</span>
             </NavLink>
             <NavLink to="/">

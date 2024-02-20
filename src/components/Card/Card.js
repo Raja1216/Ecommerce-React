@@ -43,7 +43,8 @@ const Card = ({ product }) => {
     dispatch(deleteProduct(id));
   };
   const addToCart = (product) => {
-    dispatch(addItem(product));
+    const newObj = Object.assign({ qty: 1 }, product);
+    dispatch(addItem(newObj));
   };
 
   return (

@@ -17,7 +17,13 @@ const cartSlice = createSlice({
         state.cartItems.push(action.payload);
         toast.success("Item Added Successfully!", { theme: "dark" });
       } else {
-        toast.info("Item Already Added!", { theme: "dark" });
+        const index = state.cartItems.findIndex(
+          (product) => product.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.cartItems[index] = action.payload;
+        }
+        toast.info("Item Quantity Updated Successfully!", { theme: "dark" });
       }
     },
     removeItem: (state, action) => {
