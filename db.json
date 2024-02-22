@@ -1,39 +1,52 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Tropical Leaf",
-      "price": 100,
-      "rating": 4.5,
-      "description": "Here's a simple implementation of a React component for a star rating system that accepts dynamic data ranging from 1 to 5 with increments of 0.5 and displays half stars for values like 1.5, 2.5,etc."
+      "id": "d37a",
+      "name": "Black Nike",
+      "price": "4000",
+      "rating": "4.5",
+      "description": "To fetch an image URL from an online source based on a provided name in React.js, you can use an API that provides access to images based on search terms. One popular option is the Unsplash API, which offers a vast collection of high-quality images. Here's an example of how you can use the Unsplash API to fetch an image URL based on a search term in a React component",
+      "images": [
+        "https://images.unsplash.com/photo-1683918385153-3724d9ead0f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDAwNzZ8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1705943881669-6c561d98ab40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDAwNzZ8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1706545513040-174425281712?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDAwNzZ8&ixlib=rb-4.0.3&q=80&w=1080"
+      ]
     },
     {
-      "name": "SP1",
-      "price": "321",
-      "rating": "3",
-      "description": "yguyguy jghighhg jhjhgjg gfvgff hgfgg ",
-      "id": "570d"
+      "name": "nike shoes black",
+      "price": "4800",
+      "rating": "4.2",
+      "description": "To fetch an image URL from an online source based on a provided name in React.js, you can use an API that provides access to images based on search terms. One popular option is the Unsplash API, which offers a vast collection of high-quality images. Here's an example of how you can use the Unsplash API to fetch an image URL based on a search term in a React component",
+      "images": [
+        "https://images.unsplash.com/photo-1519432359516-73a2bb421826?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDAzNjV8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1521848644131-fab28160bccc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDAzNjV8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1707325621105-1c3eba0faa15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDAzNjV8&ixlib=rb-4.0.3&q=80&w=1080"
+      ],
+      "id": "3643"
     },
     {
-      "id": "d181",
-      "name": "reytry",
-      "price": "543",
-      "rating": "5",
-      "description": "fghfgjh fgthftu fttru ftryuyytu"
+      "id": "411d",
+      "name": "nike jordan 2",
+      "price": "9800",
+      "rating": "4.8",
+      "description": "To fetch an image URL from an online source based on a provided name in React.js, you can use an API that provides access to images based on search terms. One popular option is the Unsplash API, which offers a vast collection of high-quality images. Here's an example of how you can use the Unsplash API to fetch an image URL based on a search term in a React component",
+      "images": [
+        "https://images.unsplash.com/photo-1653164673020-bae8b512f2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU0NTF8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1699901232384-f1646fb2a8da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU0NTF8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU0NTF8&ixlib=rb-4.0.3&q=80&w=1080"
+      ]
     },
     {
-      "id": "fefe",
-      "name": "sdgfsdgh",
-      "price": "120",
-      "rating": "3",
-      "description": "tdryetr dtytrhtre tyrtu"
-    },
-    {
-      "id": "6b09",
-      "name": "fgjf",
-      "price": "1",
-      "rating": "4",
-      "description": "fdhdfhdj tytru tfrurtui"
+      "id": "6493",
+      "name": "adidas black shoes ",
+      "price": "3800",
+      "rating": "4.2",
+      "description": "To fetch an image URL from an online source based on a provided name in React.js, you can use an API that provides access to images based on search terms. One popular option is the Unsplash API, which offers a vast collection of high-quality images. Here's an example of how you can use the Unsplash API to fetch an image URL based on a search term in a React component",
+      "images": [
+        "https://images.unsplash.com/photo-1643051106558-e59ba069144e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU2OTd8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1699096173775-6ce989a5e8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU2OTd8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1571685307694-b0658186ad3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU2OTd8&ixlib=rb-4.0.3&q=80&w=1080"
+      ]
     }
   ]
 }

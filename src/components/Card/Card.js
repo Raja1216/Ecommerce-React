@@ -16,8 +16,8 @@ const Card = ({ product }) => {
   const [price, setPrice] = useState("");
   const [rating, setRating] = useState("");
   const [desc, setDesc] = useState("");
-  const bgImage =
-    "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80";
+  // const bgImage =
+  //   "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80";
 
   const handleEditClick = (product) => {
     setName(product.name);
@@ -28,14 +28,15 @@ const Card = ({ product }) => {
     setIsEditing(!isEditing);
   };
 
-  const handleSaveClick = (id) => {
+  const handleSaveClick = (prod) => {
     const req_data = {
       name: name,
       price: price,
       rating: rating,
       description: desc,
+      images: prod.images,
     };
-    dispatch(updateProduct({ id: id, productData: req_data }));
+    dispatch(updateProduct({ id: prod.id, productData: req_data }));
     setIsEditing(false);
   };
 
@@ -53,7 +54,7 @@ const Card = ({ product }) => {
         <div
           className="cover"
           style={{
-            backgroundImage: 'url("' + bgImage + '")',
+            backgroundImage: 'url("' + product.images[0] + '")',
           }}
         >
           <span className="price">₨ {product.price}</span>
@@ -108,7 +109,7 @@ const Card = ({ product }) => {
               </span>
               <span
                 className="card-back-btn"
-                onClick={() => handleSaveClick(product.id)}
+                onClick={() => handleSaveClick(product)}
               >
                 Save
               </span>

@@ -65,6 +65,9 @@ $transition-time: 2s;
       background: rgba(0, 0, 0, 0.4);
     }
     h1 {
+      width: 12rem;
+      height: 3.2rem;
+      overflow: hidden;
       font-weight: 600;
       position: absolute;
       bottom: 13rem;

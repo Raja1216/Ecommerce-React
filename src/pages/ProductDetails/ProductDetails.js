@@ -11,16 +11,9 @@ const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   let { productDetails } = useSelector((state) => state.product);
-
   const [mainImage, setMainImage] = useState(null);
   const [zoomedImage, setZoomedImage] = useState(null);
   const [qty, setQty] = useState(1);
-
-  const images = [
-    "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80",
-    "https://media.istockphoto.com/id/1277767891/photo/various-fresh-ripe-pumpkins-as-background.webp?b=1&s=170667a&w=0&k=20&c=R1wp9cc9PkUmOiE9PdXlDe2FUBQ3YpxJMjV8yxzLXRY=",
-    "https://media.istockphoto.com/id/1473495759/photo/cozy-modern-living-room-interior-with-leather-armchair-and-decoration-room-on-empty-dark-blue.webp?b=1&s=170667a&w=0&k=20&c=1K3nwA1ROH_YQiqYVStRIykgImWjJ9p-6CQ-ZFZCVp4=",
-  ];
 
   const handleClick = (image) => {
     setMainImage(image);
@@ -44,12 +37,12 @@ const ProductDetails = () => {
             {...{
               smallImage: {
                 alt: "Main",
-                src: mainImage || images[0],
+                src: mainImage || productDetails?.images[0],
                 width: 260,
                 height: 340,
               },
               largeImage: {
-                src: zoomedImage || images[0],
+                src: zoomedImage || productDetails?.images[0],
                 width: 1200,
                 height: 1800,
               },
@@ -60,7 +53,7 @@ const ProductDetails = () => {
             }}
           />
           <div className="thumbnail-images">
-            {images.map((image, index) => (
+            {productDetails?.images.map((image, index) => (
               <img
                 key={index}
                 src={image}
@@ -81,7 +74,11 @@ const ProductDetails = () => {
             <RatingStars rating={productDetails?.rating} />
           </div>
           <div className="details_inpt_btn">
-            <select name="qty" className="select_inpt" onChange={(e) => setQty(e.target.value)} >
+            <select
+              name="qty"
+              className="select_inpt"
+              onChange={(e) => setQty(e.target.value)}
+            >
               <option value={1}>1</option>
               <option value={2}>2</option>
               <option value={3}>3</option>

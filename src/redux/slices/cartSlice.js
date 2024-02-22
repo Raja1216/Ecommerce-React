@@ -10,20 +10,18 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addItem(state, action) {
-      const existingItem = state.cartItems.find(
+      let existingItem = state.cartItems.find(
         (item) => item.id === action.payload.id
       );
       if (!existingItem) {
         state.cartItems.push(action.payload);
         toast.success("Item Added Successfully!", { theme: "dark" });
-      } else {
-        const index = state.cartItems.findIndex(
-          (product) => product.id === action.payload.id
-        );
-        if (index !== -1) {
-          state.cartItems[index] = action.payload;
-        }
+      } else if ((existingItem.qty != action.payload.qty)) {
+        existingItem.qty = action.payload.qty;
         toast.info("Item Quantity Updated Successfully!", { theme: "dark" });
+      }
+      else {
+        toast.error("Item is Already Added !!", { theme: "dark" });
       }
     },
     removeItem: (state, action) => {
@@ -46,5 +44,5 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addItem } = cartSlice.actions;
+export const { addItem, removeItem, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
