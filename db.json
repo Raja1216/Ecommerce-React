@@ -14,7 +14,7 @@
     },
     {
       "name": "nike shoes black",
-      "price": "4800",
+      "price": "4805",
       "rating": "4.2",
       "description": "To fetch an image URL from an online source based on a provided name in React.js, you can use an API that provides access to images based on search terms. One popular option is the Unsplash API, which offers a vast collection of high-quality images. Here's an example of how you can use the Unsplash API to fetch an image URL based on a search term in a React component",
       "images": [
@@ -25,8 +25,7 @@
       "id": "3643"
     },
     {
-      "id": "411d",
-      "name": "nike jordan 2",
+      "name": "nike jordan",
       "price": "9800",
       "rating": "4.8",
       "description": "To fetch an image URL from an online source based on a provided name in React.js, you can use an API that provides access to images based on search terms. One popular option is the Unsplash API, which offers a vast collection of high-quality images. Here's an example of how you can use the Unsplash API to fetch an image URL based on a search term in a React component",
@@ -34,7 +33,8 @@
         "https://images.unsplash.com/photo-1653164673020-bae8b512f2d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU0NTF8&ixlib=rb-4.0.3&q=80&w=1080",
         "https://images.unsplash.com/photo-1699901232384-f1646fb2a8da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU0NTF8&ixlib=rb-4.0.3&q=80&w=1080",
         "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU0NTF8&ixlib=rb-4.0.3&q=80&w=1080"
-      ]
+      ],
+      "id": "411d"
     },
     {
       "id": "6493",
@@ -46,6 +46,102 @@
         "https://images.unsplash.com/photo-1643051106558-e59ba069144e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU2OTd8&ixlib=rb-4.0.3&q=80&w=1080",
         "https://images.unsplash.com/photo-1699096173775-6ce989a5e8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU2OTd8&ixlib=rb-4.0.3&q=80&w=1080",
         "https://images.unsplash.com/photo-1571685307694-b0658186ad3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg2MDU2OTd8&ixlib=rb-4.0.3&q=80&w=1080"
+      ]
+    },
+    {
+      "id": "939e",
+      "name": "Black Bike",
+      "price": "34578",
+      "rating": "2",
+      "description": "twert wetrwe wet wet  wet  ewtwe  wet  ",
+      "images": [
+        "https://images.unsplash.com/photo-1611025106442-2f505ace8e79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg3NTI3NTF8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1635716983858-c061845471b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg3NTI3NTF8&ixlib=rb-4.0.3&q=80&w=1080",
+        "https://images.unsplash.com/photo-1582219227779-e3d6b58499b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzAzMzF8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDg3NTI3NTF8&ixlib=rb-4.0.3&q=80&w=1080"
+      ]
+    },
+    {
+      "id": "abc0",
+      "name": "op top",
+      "price": "3456",
+      "rating": "3",
+      "description": "erter re er ery ",
+      "images": [
+        "https://images.pexels.com/photos/5932813/pexels-photo-5932813.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/5932815/pexels-photo-5932815.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/15142716/pexels-photo-15142716.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ]
+    },
+    {
+      "id": "67ab",
+      "name": "Ninja Cuter",
+      "price": "456",
+      "rating": "2",
+      "description": "fsgrt rtw  ert rt erwty rwet ",
+      "images": [
+        "https://images.pexels.com/photos/15240244/pexels-photo-15240244.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/15240238/pexels-photo-15240238.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/15240242/pexels-photo-15240242.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ]
+    },
+    {
+      "id": "01e7",
+      "name": "sunglass",
+      "price": "3489",
+      "rating": "3",
+      "description": "grd tryrt  rrtyu fgdfh sdsaf dg gh",
+      "images": [
+        "https://images.pexels.com/photos/7780086/pexels-photo-7780086.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/7777515/pexels-photo-7777515.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/7792245/pexels-photo-7792245.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ]
+    },
+    {
+      "id": "8128",
+      "name": "Iphone 15 Pro",
+      "price": "150000",
+      "rating": "4.6",
+      "description": "wtrwt eyry fghfdh dfbgdf  ertrey dfhyrtyh rtytre y dfg rty",
+      "images": [
+        "https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?auto=compress&cs=tinysrgb&h=350",
+        "https://images.pexels.com/photos/343720/pexels-photo-343720.jpeg?auto=compress&cs=tinysrgb&h=350"
+      ]
+    },
+    {
+      "id": "57c6",
+      "name": "Cell Phone",
+      "price": "4500",
+      "rating": "2",
+      "description": "werwer wrt ",
+      "images": [
+        "https://images.pexels.com/photos/18338417/pexels-photo-18338417.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708753367311",
+        "https://images.pexels.com/photos/18338304/pexels-photo-18338304.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708753367311",
+        "https://images.pexels.com/photos/17792997/pexels-photo-17792997.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708753367311"
+      ]
+    },
+    {
+      "id": "34d7",
+      "name": "Iphone 15 Pro ",
+      "price": "4567890",
+      "rating": "2",
+      "description": "tet wtewe  wetw wt ",
+      "images": [
+        "https://images.pexels.com/photos/20291795/pexels-photo-20291795.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708753704110",
+        "https://images.pexels.com/photos/19060160/pexels-photo-19060160.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708753704110",
+        "https://images.pexels.com/photos/18525573/pexels-photo-18525573.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708753704110"
+      ]
+    },
+    {
+      "id": "8846",
+      "name": "mac book pro",
+      "price": "230000",
+      "rating": "4",
+      "description": "tryeryn rty rtyw w ywe w y",
+      "images": [
+        "https://images.pexels.com/photos/4050325/pexels-photo-4050325.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708754056342",
+        "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708754056342",
+        "https://images.pexels.com/photos/3975680/pexels-photo-3975680.jpeg?auto=compress&cs=tinysrgb&h=350?t=1708754056342"
       ]
     }
   ]

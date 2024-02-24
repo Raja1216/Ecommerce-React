@@ -6,7 +6,7 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/slices/cartSlice";
 import { deleteProduct, updateProduct } from "../../redux/slices/productSlice";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ product }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -16,6 +16,7 @@ const Card = ({ product }) => {
   const [price, setPrice] = useState("");
   const [rating, setRating] = useState("");
   const [desc, setDesc] = useState("");
+  const navigate = useNavigate();
   // const bgImage =
   //   "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=80";
 
@@ -47,6 +48,9 @@ const Card = ({ product }) => {
     const newObj = Object.assign({ qty: 1 }, product);
     dispatch(addItem(newObj));
   };
+  const handelNavigate = (id) => {
+    navigate(`product-details/${id}`);
+  };
 
   return (
     <div className="col-md-3">
@@ -62,10 +66,8 @@ const Card = ({ product }) => {
             <MdOutlineDeleteOutline onClick={() => handleDelete(product.id)} />
             <CiEdit onClick={() => handleEditClick(product)} />
           </span>
-          <Link to={`product-details/${product.id}`}>
-            <h1>{product.name}</h1>
-          </Link>
-          <span className="card-desc">{product.description}</span>
+          <h1 onClick={() => handelNavigate(product.id)}>{product.name}</h1>
+          <span className="card-desc" onClick={() => handelNavigate(product.id)}>{product.description}</span>
           <span className="ratings-container">
             <RatingStars rating={product.rating} />
           </span>

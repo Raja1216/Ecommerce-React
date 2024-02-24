@@ -68,7 +68,6 @@ const productSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.productList = action.payload;
-        toast.success("Product get successfully!", { theme: "dark" });
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "failed";
@@ -82,6 +81,7 @@ const productSlice = createSlice({
       .addCase(getProductDetails.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.productDetails = action.payload;
+        toast.success("Product Details get successfully!", { theme: "dark" });
       })
       .addCase(getProductDetails.rejected, (state, action) => {
         state.status = "failed";
@@ -96,12 +96,14 @@ const productSlice = createSlice({
         );
         if (index !== -1) {
           state.productList[index] = action.payload;
+          toast.success("Product Details Updated successfully!", { theme: "dark" });
         }
       })
       .addCase(deleteProduct.fulfilled, (state, action) => {
         state.productList = state.productList.filter(
           (product) => product.id !== action.payload
         );
+        toast.success("Product Deleted successfully!", { theme: "dark" });
       });
   },
 });

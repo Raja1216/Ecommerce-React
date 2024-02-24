@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './AddProduct.scss'
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -13,24 +13,40 @@ const AddProduct = () => {
   const dispatch = useDispatch();
   const [imageUrls, setImageUrls] = useState([]);
 
-   const fetchImageUrls = async () => {
-     try {
-       const response = await fetch(
-         `https://api.unsplash.com/photos/random?count=3&query=${name}&client_id=AFPY_XWBVRGxohrEPeqYF51zm2MlF90W2cLkgFXubIo`
-       );
-       const data = await response.json();
-       const urls = data.map((item) => item.urls.regular);
-       await setImageUrls(urls);
-     } catch (error) {
-       console.error("Error fetching images:", error);
-     }
-   };
+  useEffect(() => {
+    const fetchImageUrls = async () => {
+      try {
+        const response = await fetch(
+          `https://api.pexels.com/v1/search?query=${name}&per_page=3`,
+          {
+            headers: {
+              Authorization:
+                "GAMA7IMKoDD4gx7MaxU6WDRPuOCO4YerlkOBqmhGBmf63pVHK6dorlGN",
+            },
+          }
+        );
+        const data = await response.json();
+        // const urls = data.photos.map(
+        //   (photo) => `${photo.src.medium}?t=${Date.now()}`
+        // );
+        const urls = data.photos.map(
+          (photo) => `${photo.src.medium}`
+        );
+        console.log(urls);
+        await setImageUrls(urls);
+      } catch (error) {
+        console.error("Error fetching images:", error);
+      }
+    };
+    if (name.trim() !== "" &&  name.length >= 3) {
+      fetchImageUrls();
+    }
+  },[name])
 
   const handelAdd = () => {
     if (!name || !price || !rating || !desc ) {
       toast.error("All Fields Are Mendatory", { theme: "dark" });
     } else {
-      fetchImageUrls();
       const req_data = {
         name: name,
         price: price,
